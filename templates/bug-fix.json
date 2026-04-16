@@ -1,0 +1,19 @@
+{
+  "project": "REPO-NAME",
+  "branchName": "fix/SHORT-DESCRIPTION",
+  "description": "Fix BUG-DESCRIPTION. The bug occurs when STEPS-TO-REPRODUCE. Root cause is LIKELY-CAUSE.",
+  "userStories": [
+    {
+      "id": "BF-001",
+      "title": "Fix BUG-DESCRIPTION",
+      "description": "In apps/api/src/routes/ROUTE-FILE.ts, the BUG-MANIFESTATION. Fix by CHANGES-NEEDED. The fix should handle EDGE-CASE.",
+      "acceptanceCriteria": [
+        "Specific behavior no longer occurs",
+        "Edge case handled",
+        "pnpm build && pnpm test pass",
+        "No regression in related tests"
+      ],
+      "priority": 1
+    }
+  ]
+}
