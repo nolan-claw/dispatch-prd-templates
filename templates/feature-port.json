@@ -1,0 +1,30 @@
+{
+  "project": "REPO-NAME",
+  "branchName": "feat/FEATURE-NAME-port",
+  "description": "Port FEATURE from staging REFERENCE-CODEBASE into monorepo. The reference code is at /home/matchpoint/repositories/REFERENCE-PATH/src/. The target is apps/api/src/services/TARGET-PATH/. Reimplement in TypeScript — the reference code is behavioral spec only.",
+  "userStories": [
+    {
+      "id": "FP-001",
+      "title": "Port SERVICE-NAME from reference",
+      "description": "Port SERVICE-NAME from /home/matchpoint/repositories/REFERENCE-PATH/src/SERVICE-FILE.py into apps/api/src/services/TARGET/service-name.service.ts. The service does BRIEF-DESCRIPTION. Use Zod schemas for input/output. Import types from @matchpoint/shared where they exist.",
+      "acceptanceCriteria": [
+        "service-name.service.ts exists and exports FUNCTION-NAMES",
+        "Zod schemas for InputType and OutputType defined",
+        "pnpm build passes from repo root",
+        "Existing code imports and calls the new service"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "FP-002",
+      "title": "Wire SERVICE-NAME into existing pipeline",
+      "description": "Update apps/api/src/services/existing.service.ts to call the new service at the correct point in the pipeline. Add any needed imports and error handling.",
+      "acceptanceCriteria": [
+        "Existing service calls new service",
+        "Error handling for service failures",
+        "pnpm build && pnpm test pass"
+      ],
+      "priority": 2
+    }
+  ]
+}
