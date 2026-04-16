@@ -1,0 +1,30 @@
+{
+  "project": "REPO-NAME",
+  "branchName": "feat/PACKAGE-NAME-package",
+  "description": "Create packages/PACKAGE-NAME/ as a new Turborepo package. PURPOSE. Add to turbo.json pipeline and pnpm-workspace.yaml.",
+  "userStories": [
+    {
+      "id": "NP-001",
+      "title": "Scaffold PACKAGE-NAME package",
+      "description": "Create packages/PACKAGE-NAME/ with: package.json (name: @matchpoint/PACKAGE-NAME), tsconfig.json, src/index.ts (exports), SKILL.md (docs). Add to turbo.json build pipeline. Add to pnpm-workspace.yaml.",
+      "acceptanceCriteria": [
+        "Package directory exists with all config files",
+        "turbo.json includes @matchpoint/PACKAGE-NAME in pipeline",
+        "pnpm build passes from repo root",
+        "Package is importable by apps/*"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "NP-002",
+      "title": "Implement core PACKAGE-NAME logic",
+      "description": "Implement the core functionality in packages/PACKAGE-NAME/src/. DETAILS. Export from index.ts.",
+      "acceptanceCriteria": [
+        "Core functions exported and tested",
+        "Zod schemas for all public interfaces",
+        "pnpm build && pnpm test pass"
+      ],
+      "priority": 2
+    }
+  ]
+}
